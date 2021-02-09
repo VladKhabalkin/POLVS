@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" lang="en">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;800&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+</head>
+<body>
+    <main class="weather-container">
+        <div class="search-city-container">
+            <input type="text" id="city-search" placeholder="enter city, country">
+            <input type="button" id="search-start" value="GO" onclick="getWeather(document.getElementById('city-search').value)">
+        </div>
+        <div class="weather-panel-container">
+            <div class="city-name"></div>
+            <div class="city-temperature">
+                <img src="" alt="Weather Icon" class="weather-icon">
+                <div class="temperature">
+                </div>
+                <label for="F">°F</label>
+                <input type="radio" id="F" name="r1" onchange="temperatureChange()" checked>
+                <label for="C">°C</label>
+                <input type="radio" id="C" name="r1" onchange="temperatureChange()">
+            </div>
+            <div class="weather-info">
+                <div class="date"></div>
+                <div class="weather-description" style="text-transform: capitalize;"></div>
+                <div></div>
+                <div class="wind"></div>
+                <div class="humidity"></div>
+            </div>
+            <div class="weather-report">
+            </div>
+        </div>
+    </main>
+</body>
+</html>
